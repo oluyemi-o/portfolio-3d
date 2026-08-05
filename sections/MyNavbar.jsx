@@ -1,5 +1,5 @@
-import menu from "../assets/menu.svg"
-import close from "../assets/close.svg"
+import menu from "../assets/misc/menu.svg"
+import close from "../assets/misc/close.svg"
 import { useState } from "react";
 import { motion } from "motion/react";
 
@@ -7,6 +7,7 @@ import { motion } from "motion/react";
 
 function Navigation() {
     return (
+        // list of nav links
         <ul className="nav-ul">
             <li className="nav-li">
                 <a className="nav-link" href="home">Home</a>
@@ -25,6 +26,7 @@ function Navigation() {
 }
 
 function MyNavbar() {
+    // state for navbar menu on smaller screens
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -39,11 +41,13 @@ function MyNavbar() {
                     <button onClick={() => { setIsOpen(!isOpen) }} className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden">
                         <img src={isOpen ? close : menu} className="w-6 h-6" />
                     </button>
+                    {/* hidden but shown on smaller screens */}
                     <nav className="hidden sm:flex">
                         <Navigation />
                     </nav>
                 </div>
             </div>
+            {/* shows by default but hidden on smaller screens */}
             {isOpen && (
                 <motion.div
                     className="block overflow-hidden text-center sm:hidden"

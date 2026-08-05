@@ -7,6 +7,8 @@ function App() {
     <div className="container mx-auto max-w-7xl ">
       <MyNavbar />
       <Hero />
+
+      {/* sections for empty space to test hero */}
       <section className="min-h-screen" />
       <section className="min-h-screen" />
       <section className="min-h-screen" />
