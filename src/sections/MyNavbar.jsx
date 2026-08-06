@@ -1,7 +1,8 @@
-import menu from "../assets/misc/menu.svg"
-import close from "../assets/misc/close.svg"
+import menu from "../../assets/misc/menu.svg"
+import close from "../../assets/misc/close.svg"
 import { useState } from "react";
 import { motion } from "motion/react";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -10,16 +11,19 @@ function Navigation() {
         // list of nav links
         <ul className="nav-ul">
             <li className="nav-li">
-                <a className="nav-link" href="home">Home</a>
+                <NavLink to={"/"} className="nav-link">Home</NavLink>
             </li>
             <li className="nav-li">
-                <a className="nav-link" href="about">About</a>
+                <NavLink to={"/about"} className="nav-link">About</NavLink>
+
             </li>
             <li className="nav-li">
-                <a className="nav-link" href="work">Work</a>
+                <NavLink to={"/work"} className="nav-link">Work</NavLink>
+
             </li>
             <li className="nav-li">
-                <a className="nav-link" href="contact">Contact</a>
+                <NavLink to={"/contact"} className="nav-link">Contact</NavLink>
+
             </li>
         </ul>
     )
@@ -30,7 +34,7 @@ function MyNavbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
+        <div className="fixed inset-x-0 z-20 w-screen backdrop-blur-lg bg-primary/40">
             <div className="mx-auto c-space max-w-7xl">
                 <div className="flex items-center justify-between py-2 sm:py-0">
                     <a

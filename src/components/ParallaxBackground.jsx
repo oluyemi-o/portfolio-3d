@@ -1,11 +1,11 @@
 import React from 'react'
-import sky from "../assets/PNG-no-blur/sky_01.png"
-import rightRock from "../assets/parallax-adjusted/rock_04.svg"
-import leftRock from "../assets/parallax-adjusted/rock_2.svg"
-import planet1 from "../assets/parallax-adjusted/planet_01.svg"
-import planet2 from "../assets/parallax-adjusted/planet_02.svg"
-import floatingRocks from "../assets/parallax-adjusted/rock_03.svg"
-import sun from "../assets/parallax-adjusted/sun_01.svg"
+import sky from "../../assets/PNG-no-blur/sky_01.png"
+import rightRock from "../../assets/parallax-adjusted/rock_04.svg"
+import leftRock from "../../assets/parallax-adjusted/rock_2.svg"
+import planet1 from "../../assets/parallax-adjusted/planet_01.svg"
+import planet2 from "../../assets/parallax-adjusted/planet_02.svg"
+import floatingRocks from "../../assets/parallax-adjusted/rock_03.svg"
+import sun from "../../assets/parallax-adjusted/sun_01.svg"
 
 import { motion, useScroll, useSpring, useTransform } from "motion/react"
 
