@@ -10,8 +10,10 @@
   }
 }
 @theme {
-  --color-primary: #030412;
-  --color-midnight: #06091f;
+  --color-primary: #050816;
+  --color-secondary: #aaa6c3;
+  --color-midnight: #aaa6c3;
+  --color-tertiary: #1d1836;
   --color-navy: #161a31;
   --color-indigo: #1f1e39;
   --color-storm: #282b4b;
@@ -23,6 +25,8 @@
   --color-orange: #cc6033;
   --color-sand: #d6995c;
   --color-coral: #ea4884;
+  --color-black-100: #100d25;
+  --color-black-200: #090325;
   --animate-orbit: orbit 50s linear infinite;
   @keyframes orbit {
     0% {
@@ -247,7 +251,29 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.purple-text-gradient {
+  background: #9b5de5;
+  background: -webkit-linear-gradient(to top, #9b5de5, #be95ff);
+  background: linear-gradient(to top, #9b5de5, #be95ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+.yellow-text-gradient {
+  background: #f9d423;
+  background: -webkit-linear-gradient(to top, #f9d423, #ff4e50);
+  background: linear-gradient(to top, #f9d423, #ff4e50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.teal-text-gradient {
+  background: #2dd4bf;
+  background: -webkit-linear-gradient(to top, #2dd4bf, #38bdf8);
+  background: linear-gradient(to top, #2dd4bf, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

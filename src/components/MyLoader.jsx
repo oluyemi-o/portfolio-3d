@@ -1,19 +1,15 @@
-import { useProgress } from "@react-three/drei"
-import React from 'react'
+import { Html, useProgress } from "@react-three/drei"
 
 function MyLoader() {
-
-    const { active, progress } = useProgress()
-
-    if (!active) return null
+    const { progress } = useProgress()
 
     return (
-        // displays counter when model is loading
-        <div className="fixed inset-0 z-50 flex items-center justify-center text-center text-xl font-black">
-            {Math.round(progress)}% Loaded
-        </div>
+        <Html center>
+            <div className="text-center text-xl font-black whitespace-nowrap">
+                {Math.round(progress)}% Loaded
+            </div>
+        </Html>
     )
-
 }
 
 export default MyLoader

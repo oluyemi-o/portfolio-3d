@@ -1,10 +1,9 @@
 import { Suspense, useEffect, useRef, useState } from 'react'
 import { Canvas, useFrame } from "@react-three/fiber"
-import { Float, OrbitControls, Preload, useGLTF } from "@react-three/drei"
+import { Float, OrbitControls, Preload, useGLTF, useProgress } from "@react-three/drei"
 import { useMotionValue, useSpring } from "framer-motion"
 import { easing } from "maath"
 import MyLoader from "./MyLoader"
-
 function Astronaut({ scale }) {
     const group = useRef()
 
@@ -53,7 +52,7 @@ function AstronautCanvas({ scale }) {
                 gl={{ preserveDrawingBuffer: true }}
             >
                 <Float >
-                    <Suspense fallback={null}>
+                    <Suspense fallback={<MyLoader />}>
                         <OrbitControls
                             enableZoom={false}
                             maxPolarAngle={Math.PI / 2}
@@ -67,7 +66,7 @@ function AstronautCanvas({ scale }) {
                 {/* <Rig enabled={!isOrbiting} /> */}
                 <Preload all />
             </Canvas>
-            <MyLoader />
+
         </>
     )
 
