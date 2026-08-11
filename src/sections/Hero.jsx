@@ -12,7 +12,7 @@ function Hero() {
     const isMobile = useMediaQuery({ maxWidth: "767px" })
 
     return (
-        <section className="flex items-start justify-center md:items-start md:justify-start w-screen min-h-screen overflow-hidden c-space">
+        <section className="flex items-start justify-center md:items-start md:justify-start w-screen min-h-screen overflow-hidden c-space scroll-mt-20">
 
             {/* Descriptions in hero */}
             <HeroText />

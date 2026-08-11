@@ -2,7 +2,6 @@ import menu from "../../assets/misc/menu.svg"
 import close from "../../assets/misc/close.svg"
 import { useState } from "react";
 import { motion } from "motion/react";
-import { NavLink } from "react-router-dom";
 
 
 
@@ -11,18 +10,15 @@ function Navigation() {
         // list of nav links
         <ul className="nav-ul">
             <li className="nav-li">
-                <NavLink to={"/"} className="nav-link">Home</NavLink>
-            </li>
-            <li className="nav-li">
-                <NavLink to={"/about"} className="nav-link">About</NavLink>
+                <a href="#about" className="nav-link">About</a>
 
             </li>
             <li className="nav-li">
-                <NavLink to={"/work"} className="nav-link">Work</NavLink>
+                <a href="#work" className="nav-link">Work</a>
 
             </li>
             <li className="nav-li">
-                <NavLink to={"/contact"} className="nav-link">Contact</NavLink>
+                <a href="#contact" className="nav-link">Contact</a>
 
             </li>
         </ul>
@@ -38,7 +34,7 @@ function MyNavbar() {
             <div className="mx-auto c-space max-w-7xl">
                 <div className="flex items-center justify-between py-2 sm:py-0">
                     <a
-                        href="/" className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
+                        href="#home" className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
                     >
                         Yemi
                     </a>
