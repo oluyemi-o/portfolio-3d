@@ -44,8 +44,8 @@ function ParallaxBackground() {
                 <motion.div
                     className="absolute inset-0 -z-60"
                     style={{
-                        // backgroundImage: "url(/sun_01.svg)",
-                        backgroundImage: `url(${sun})`,
+                        backgroundImage: "url(/sun_01.svg)",
+                        // backgroundImage: `url(${sun})`,
                         backgroundPosition: "bottom",
                         backgroundSize: "cover",
                         y: backGround
