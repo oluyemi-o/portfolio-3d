@@ -5,7 +5,7 @@ import MyLoader from "./MyLoader"
 
 
 function Earth() {
-    const earth = useGLTF("./planet/scene.gltf")
+    const earth = useGLTF("/planet/scene.gltf")
 
 
     return (

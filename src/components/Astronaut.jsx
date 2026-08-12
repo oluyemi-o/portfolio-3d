@@ -8,7 +8,7 @@ function Astronaut({ scale }) {
     const group = useRef()
 
 
-    const astronaut = useGLTF("./models/chibi_astronaut/scene.gltf")
+    const astronaut = useGLTF("/chibi_astronaut/scene.gltf")
     const yPosition = useMotionValue(8)
     const ySpring = useSpring(yPosition, { damping: 30 })
 
