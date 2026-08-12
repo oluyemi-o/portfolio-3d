@@ -7,8 +7,11 @@ import Hero from "./sections/Hero";
 import MyNavbar from "./sections/MyNavbar";
 import Tech from "./sections/Tech";
 import Work from "./sections/Work";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
   return (
     <>
       <div className="container mx-auto max-w-7xl ">
@@ -16,9 +19,11 @@ function App() {
           <MyNavbar />
           <Hero />
         </div>
-        <div className="relative -z-80 top-[0px]">
-          <StarsCanvas />
-        </div>
+        {!isMobile && (
+          <div className="relative -z-80 top-[0px]">
+            <StarsCanvas />
+          </div>
+        )}
         <About />
         <Tech />
         <Work />

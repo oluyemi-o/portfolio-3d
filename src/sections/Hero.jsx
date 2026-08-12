@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import HeroText from "../components/HeroText"
 import ParallaxBackground from "../components/ParallaxBackground"
-import { Canvas } from "@react-three/fiber"
 import Astronaut from "../components/Astronaut"
 import { useMediaQuery } from "react-responsive"
 import { motion } from "motion/react"
@@ -21,13 +20,14 @@ function Hero() {
             <ParallaxBackground />
 
             {/* 3D Model with responsiveness for smaller screens */}
-            <div className={isMobile ? "absolute top-30 " : " absolute top-[-50px] left-80 inset-0 "}
-                style={{ width: "100vw", height: "100vh" }}
-            >
-                <Astronaut
-                    scale={isTablet ? 1 : 1.5}
-                />
-            </div>
+            {!isMobile && (
+                <div
+                    className="absolute top-[-50px] left-80 inset-0"
+                    style={{ width: "100vw", height: "100vh" }}
+                >
+                    <Astronaut scale={isTablet ? 1 : 1.5} />
+                </div>
+            )}
 
             {/* scroll down animation and button */}
             <div className="absolute sm:bottom-5 bottom-32 left-0 w-full flex justify-center items-center">
