@@ -16,14 +16,12 @@ function App() {
           <MyNavbar />
           <Hero />
         </div>
-        <div className="relative -z-80">
+        <div className="relative -z-80 top-[0px]">
           <StarsCanvas />
-          <About />
-          <Experience />
-          <Tech />
-          <Work />
-          <Feedback />
         </div>
+        <About />
+        <Tech />
+        <Work />
         <Contact />
       </div>
 

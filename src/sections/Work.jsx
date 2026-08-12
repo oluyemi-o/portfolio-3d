@@ -1,12 +1,12 @@
 import { motion } from "framer-motion"
 import { Tilt } from "react-tilt"
 import { styles } from "../styles"
-import { git, github } from "../../assets/rest"
+import { git, github, vercel } from "../../assets/rest"
 import { SectionWrapper } from "../hoc"
 import { projects } from "../constants"
 import { fadeIn, textVariant } from "../utils/motion"
 
-function ProjectCard({ index, name, description, tags, image, source_code_link }) {
+function ProjectCard({ index, name, description, tags, image, source_code_link, deploy_link }) {
     return (
         <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} >
             <Tilt
@@ -25,16 +25,27 @@ function ProjectCard({ index, name, description, tags, image, source_code_link }
                     />
 
                     <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+                        <div onClick={() => window.open(deploy_link, "_blank")}
+                            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                        >
+                            <img
+                                src={vercel}
+                                alt="github"
+                                className="w-[25px] h-[25px] object-cover "
+                            />
+
+                        </div>
                         <div onClick={() => window.open(source_code_link, "_blank")}
-                            className="black-gradient w-10 h-10 rounded-full flex justify-center cursor-pointer"
+                            className="black-gradient w-10 h-10 ml-2 rounded-full flex justify-center items-center cursor-pointer"
                         >
                             <img
                                 src={github}
                                 alt="github"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover "
                             />
 
                         </div>
+
                         {/* make another div for deploy */}
                     </div>
                 </div>

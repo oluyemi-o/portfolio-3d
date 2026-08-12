@@ -32,7 +32,7 @@ function Stars(props) {
 function StarsCanvas() {
     return (
         // <div className="w-screen h-auto absolute inset-0 -z-1 ">
-        <div className="fixed top-20 left-0 -z-18 h-screen w-screen">
+        <div className="fixed top-0 left-0 -z-18 h-screen w-screen">
             <Canvas camera={{ position: [0, 0, 1] }}>
                 <Suspense
                     fallback={<MyLoader />}
