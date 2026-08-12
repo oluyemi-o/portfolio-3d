@@ -1,6 +1,6 @@
 import React from 'react'
 import { styles } from "../styles"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import { SectionWrapper } from "../hoc"
 import { fadeIn, textVariant } from "../utils/motion"
 import { testimonials } from "../constants"

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import { useRef, useState } from "react"
 import emailjs from "@emailjs/browser"
 import { styles } from "../styles"

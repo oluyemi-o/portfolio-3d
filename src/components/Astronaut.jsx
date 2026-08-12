@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useRef, useState } from 'react'
 import { Canvas, useFrame } from "@react-three/fiber"
 import { Float, OrbitControls, Preload, useGLTF, useProgress } from "@react-three/drei"
-import { useMotionValue, useSpring } from "framer-motion"
+import { useMotionValue, useSpring } from "motion/react"
 import { easing } from "maath"
 import MyLoader from "./MyLoader"
 function Astronaut({ scale }) {

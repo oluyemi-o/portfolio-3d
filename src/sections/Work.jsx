@@ -1,5 +1,5 @@
-import { motion } from "framer-motion"
-import { Tilt } from "react-tilt"
+import { motion } from "motion/react"
+import Tilt from "react-parallax-tilt"
 import { styles } from "../styles"
 import { git, github, vercel } from "../../assets/rest"
 import { SectionWrapper } from "../hoc"

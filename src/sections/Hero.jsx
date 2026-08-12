@@ -4,7 +4,7 @@ import ParallaxBackground from "../components/ParallaxBackground"
 import { Canvas } from "@react-three/fiber"
 import Astronaut from "../components/Astronaut"
 import { useMediaQuery } from "react-responsive"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 function Hero() {
     // checks for current screen size
