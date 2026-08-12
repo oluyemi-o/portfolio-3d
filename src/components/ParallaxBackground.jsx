@@ -5,7 +5,7 @@ import leftRock from "../../assets/parallax-adjusted/rock_2.svg"
 import planet1 from "../../assets/parallax-adjusted/planet_01.svg"
 import planet2 from "../../assets/parallax-adjusted/planet_02.svg"
 import floatingRocks from "../../assets/parallax-adjusted/rock_03.svg"
-import sun from "../../assets/parallax-adjusted/sun_01.svg"
+import sun from "/sun_01.svg"
 
 import { motion, useScroll, useSpring, useTransform } from "motion/react"
 
@@ -44,8 +44,8 @@ function ParallaxBackground() {
                 <motion.div
                     className="absolute inset-0 -z-60"
                     style={{
-                        backgroundImage: "url(../assets/parallax-adjusted/sun_01.svg)",
-                        // backgroundImage: `url(${sun})`,
+                        // backgroundImage: "url(/sun_01.svg)",
+                        backgroundImage: `url(${sun})`,
                         backgroundPosition: "bottom",
                         backgroundSize: "cover",
                         y: backGround
